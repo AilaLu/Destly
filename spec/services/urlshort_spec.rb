@@ -29,6 +29,12 @@ RSpec.describe Urlshort do
 
     expect(code).to eq(same_code)
   end
+  it "it generates a Link record with a unique lookup code" do
+    url = "https://www.youtube.com/watch?v=ZBs1a6Y25bY&list=PLjItgYqIzJ9WGy9WMf-44DXHB_7aWwJMc"
+    urlshort = Urlshort.new(url)
+    link = urlshort.generate_short_link
+    expect(link.valid?).to eq(true)
+  end
   
   
 end
