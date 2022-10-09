@@ -19,16 +19,7 @@ RSpec.describe Urlshort do
     expect(code2).not_to eq(code1)
   end
 
-  it "always gives the same lookup code to the same URL" do
-    url = "https://www.youtube.com/watch?v=ZBs1a6Y25bY&list=PLjItgYqIzJ9WGy9WMf-44DXHB_7aWwJMc"
-    urlshort = Urlshort.new(url)
-    code = urlshort.lookup_code
-    url = "https://www.youtube.com/watch?v=ZBs1a6Y25bY&list=PLjItgYqIzJ9WGy9WMf-44DXHB_7aWwJMc"
-    urlshort = Urlshort.new(url)
-    same_code = urlshort.lookup_code
-
-    expect(code).to eq(same_code)
-  end
+  
   it "it generates a Link record with a unique lookup code" do
     url = "https://www.youtube.com/watch?v=ZBs1a6Y25bY&list=PLjItgYqIzJ9WGy9WMf-44DXHB_7aWwJMc"
     urlshort = Urlshort.new(url)
