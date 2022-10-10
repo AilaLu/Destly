@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
 
+  
   def create
     url = link_params[:url]
     urlshort = Urlshort.new(url)

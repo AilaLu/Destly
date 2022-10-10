@@ -1,0 +1,7 @@
+<h1>Destly- A url shotener</h1>
+
+<%= form_with model: @link, remote: true do |form| %>
+<%= form.text_field :url %>
+<%= form.submit "Create Shortlink"%>
+<% end %>
+  
