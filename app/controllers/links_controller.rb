@@ -9,7 +9,6 @@ class LinksController < ApplicationController
     url = link_params[:url]
     urlshort = Urlshort.new(url)
     @link = urlshort.generate_short_link
-    # binding.pry
   end
 
   private
