@@ -10,6 +10,8 @@ RSpec.describe Link, type: :model do
     expect(link.valid?).to be(true)
   end
 
+  
+
   it "is invalid if no url" do
     link = Link.new(
       lookup_code: "1234567"
@@ -23,6 +25,7 @@ RSpec.describe Link, type: :model do
     )
     expect(link.valid?).to be(false)
   end
+
 
   it "is invalid if lookup code is not unique" do
     link = Link.new(
